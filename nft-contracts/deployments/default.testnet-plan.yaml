@@ -1,0 +1,29 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - requirement-publish:
+            contract-id: SP2PABAF9FTAJYNFZH93XENAJ8FVY99RRM50D2JG9.nft-trait
+            remap-sender: ST1H2QC68JG5M2YKZXN1VVBNZ7EHKAHKBA4DD11Q4
+            remap-principals:
+              SP2PABAF9FTAJYNFZH93XENAJ8FVY99RRM50D2JG9: ST1H2QC68JG5M2YKZXN1VVBNZ7EHKAHKBA4DD11Q4
+            cost: 4680
+            path: "./.cache/requirements/SP2PABAF9FTAJYNFZH93XENAJ8FVY99RRM50D2JG9.nft-trait.clar"
+            clarity-version: 1
+      epoch: "2.0"
+    - id: 1
+      transactions:
+        - contract-publish:
+            contract-name: nft-contract
+            expected-sender: ST1H2QC68JG5M2YKZXN1VVBNZ7EHKAHKBA4DD11Q4
+            cost: 10030
+            path: contracts/nft-contract.clar
+            anchor-block-only: true
+            clarity-version: 4
+      epoch: "3.3"
