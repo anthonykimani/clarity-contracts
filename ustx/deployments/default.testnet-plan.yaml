@@ -20,9 +20,9 @@ plan:
     - id: 1
       transactions:
         - contract-publish:
-            contract-name: counter
+            contract-name: ustx
             expected-sender: ST1H2QC68JG5M2YKZXN1VVBNZ7EHKAHKBA4DD11Q4
-            cost: 441019
+            cost: 11200
             path: contracts/ustx.clar
             anchor-block-only: true
             clarity-version: 4
