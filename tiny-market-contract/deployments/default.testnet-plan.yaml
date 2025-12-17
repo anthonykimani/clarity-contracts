@@ -1,0 +1,65 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - requirement-publish:
+            contract-id: SP2PABAF9FTAJYNFZH93XENAJ8FVY99RRM50D2JG9.nft-trait
+            remap-sender: ST1H2QC68JG5M2YKZXN1VVBNZ7EHKAHKBA4DD11Q4
+            remap-principals:
+              SP2PABAF9FTAJYNFZH93XENAJ8FVY99RRM50D2JG9: ST1H2QC68JG5M2YKZXN1VVBNZ7EHKAHKBA4DD11Q4
+            cost: 4680
+            path: "./.cache/requirements/SP2PABAF9FTAJYNFZH93XENAJ8FVY99RRM50D2JG9.nft-trait.clar"
+            clarity-version: 1
+        - requirement-publish:
+            contract-id: SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE.sip-010-trait-ft-standard
+            remap-sender: ST1H2QC68JG5M2YKZXN1VVBNZ7EHKAHKBA4DD11Q4
+            remap-principals:
+              SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE: ST1H2QC68JG5M2YKZXN1VVBNZ7EHKAHKBA4DD11Q4
+            cost: 8400
+            path: "./.cache/requirements/SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE.sip-010-trait-ft-standard.clar"
+            clarity-version: 1
+      epoch: "2.0"
+    - id: 1
+      transactions:
+        - contract-publish:
+            contract-name: bogus-ft
+            expected-sender: ST1H2QC68JG5M2YKZXN1VVBNZ7EHKAHKBA4DD11Q4
+            cost: 11260
+            path: contracts/sip010-token.clar
+            anchor-block-only: true
+            clarity-version: 1
+        - contract-publish:
+            contract-name: bogus-nft
+            expected-sender: ST1H2QC68JG5M2YKZXN1VVBNZ7EHKAHKBA4DD11Q4
+            cost: 11430
+            path: contracts/sip009-nft.clar
+            anchor-block-only: true
+            clarity-version: 1
+        - contract-publish:
+            contract-name: sip009-nft
+            expected-sender: ST1H2QC68JG5M2YKZXN1VVBNZ7EHKAHKBA4DD11Q4
+            cost: 11430
+            path: contracts/sip009-nft.clar
+            anchor-block-only: true
+            clarity-version: 1
+        - contract-publish:
+            contract-name: sip010-token
+            expected-sender: ST1H2QC68JG5M2YKZXN1VVBNZ7EHKAHKBA4DD11Q4
+            cost: 11260
+            path: contracts/sip010-token.clar
+            anchor-block-only: true
+            clarity-version: 1
+        - contract-publish:
+            contract-name: tiny-market-contract
+            expected-sender: ST1H2QC68JG5M2YKZXN1VVBNZ7EHKAHKBA4DD11Q4
+            cost: 56580
+            path: contracts/tiny-market-contract.clar
+            anchor-block-only: true
+            clarity-version: 1
+      epoch: "2.05"
