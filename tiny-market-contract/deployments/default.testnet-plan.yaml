@@ -28,37 +28,37 @@ plan:
     - id: 1
       transactions:
         - contract-publish:
-            contract-name: bogus-ft
+            contract-name: bogus-ft-fix
             expected-sender: ST1H2QC68JG5M2YKZXN1VVBNZ7EHKAHKBA4DD11Q4
             cost: 11260
             path: contracts/sip010-token.clar
             anchor-block-only: true
             clarity-version: 1
         - contract-publish:
-            contract-name: bogus-nft
+            contract-name: bogus-nft-v2-fix
             expected-sender: ST1H2QC68JG5M2YKZXN1VVBNZ7EHKAHKBA4DD11Q4
             cost: 11430
             path: contracts/sip009-nft.clar
             anchor-block-only: true
             clarity-version: 1
         - contract-publish:
-            contract-name: sip009-nft
+            contract-name: sip009-nft-v2-fix
             expected-sender: ST1H2QC68JG5M2YKZXN1VVBNZ7EHKAHKBA4DD11Q4
             cost: 11430
             path: contracts/sip009-nft.clar
             anchor-block-only: true
             clarity-version: 1
         - contract-publish:
-            contract-name: sip010-token
+            contract-name: sip010-token-v2-fix
             expected-sender: ST1H2QC68JG5M2YKZXN1VVBNZ7EHKAHKBA4DD11Q4
             cost: 11260
             path: contracts/sip010-token.clar
             anchor-block-only: true
             clarity-version: 1
         - contract-publish:
-            contract-name: tiny-market-contract
+            contract-name: tiny-market-contract-v2-fix
             expected-sender: ST1H2QC68JG5M2YKZXN1VVBNZ7EHKAHKBA4DD11Q4
-            cost: 56580
+            cost: 61410
             path: contracts/tiny-market-contract.clar
             anchor-block-only: true
             clarity-version: 1

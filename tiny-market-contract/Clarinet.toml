@@ -20,19 +20,19 @@ contract_id = "SP2PABAF9FTAJYNFZH93XENAJ8FVY99RRM50D2JG9.nft-trait"
 [[project.requirements]]
 contract_id = "SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE.sip-010-trait-ft-standard"
 
-[contracts.sip009-nft]
+[contracts.sip009-nft-v2-fix]
 path = "contracts/sip009-nft.clar"
 
-[contracts.bogus-nft]
+[contracts.bogus-nft-v2-fix]
 path = "contracts/sip009-nft.clar"
 
-[contracts.sip010-token]
+[contracts.sip010-token-v2-fix]
 path = "contracts/sip010-token.clar"
 
-[contracts.bogus-ft]
+[contracts.bogus-ft-fix]
 path = "contracts/sip010-token.clar"
 
-[contracts.tiny-market-contract]
+[contracts.tiny-market-contract-v2-fix]
 path = "contracts/tiny-market-contract.clar"
 
 # Check-checker settings:
